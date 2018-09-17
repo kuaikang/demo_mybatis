@@ -7,6 +7,7 @@ import com.example.util.UUID;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * @Author: kuaik
@@ -23,6 +24,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUser(User user) {
         user.setId(UUID.get());
+        user.setCreateTime(new Date());
         this.userDao.saveUser(user);
     }
 
