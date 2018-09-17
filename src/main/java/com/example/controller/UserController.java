@@ -18,7 +18,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @ResponseBody
     @PostMapping("insert")
     public String insert(@RequestBody User user){
         System.out.println("111");
@@ -26,7 +25,6 @@ public class UserController {
         return "success";
     }
 
-    @ResponseBody
     @PostMapping("selectUserById")
     public Object selectUserById(@RequestBody User user){
         if(StringUtils.isBlank(user.getId())){
