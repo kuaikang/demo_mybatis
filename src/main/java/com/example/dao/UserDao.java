@@ -1,6 +1,7 @@
 package com.example.dao;
 
 import com.example.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,5 +16,9 @@ public interface UserDao {
 
     User selectUserById(String id);
 
+    List<User> selectUserByName(@Param("userName") String userName);
+
     void batchSaveUser(List<User> userList);
+
+    List<User> selectByIdList(List<String> idList);
 }

@@ -15,4 +15,8 @@ public interface UserService {
     User selectUserById(String id);
 
     void batchSaveUser(List<User> userList);
+
+    List<User> selectUserByName(String userName);
+
+    List<User> selectByIdList(List<String> idList);
 }

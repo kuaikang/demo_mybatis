@@ -42,4 +42,20 @@ public class UserController {
         }
         return this.userService.selectUserById(user.getId());
     }
+
+    @PostMapping("getUserByName")
+    public Object getUserByName(@RequestBody User user){
+        if(StringUtils.isBlank(user.getUserName())){
+            return "param error";
+        }
+        return this.userService.selectUserByName(user.getUserName());
+    }
+
+    @PostMapping("getUserByIdList")
+    public Object getUserByIdLise(@RequestBody List<String> idList){
+        if(CollectionUtils.isEmpty(idList)){
+            return "param error";
+        }
+        return this.userService.selectByIdList(idList);
+    }
 }

@@ -40,4 +40,14 @@ public class UserServiceImpl implements UserService {
         }
         this.userDao.batchSaveUser(userList);
     }
+
+    @Override
+    public List<User> selectUserByName(String userName) {
+        return this.userDao.selectUserByName(userName);
+    }
+
+    @Override
+    public List<User> selectByIdList(List<String> idList) {
+        return this.userDao.selectByIdList(idList);
+    }
 }

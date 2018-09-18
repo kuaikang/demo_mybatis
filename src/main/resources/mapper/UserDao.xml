@@ -5,9 +5,16 @@
         INSERT INTO user (`id`, `user_name`, `sex`, `phone`, `create_time`)
         VALUES (#{id}, #{userName}, #{sex}, #{phone}, now());
     </insert>
+
     <select id="selectUserById" parameterType="java.lang.String" resultType="com.example.entity.User">
         select * from user where id = #{id}
     </select>
+
+    <select id="selectUserByName" parameterType="java.lang.String" resultType="com.example.entity.User">
+      <bind name="pattern" value="'%' + userName + '%'"></bind>
+        select * from user where user_name like #{pattern}
+    </select>
+
     <insert id="batchSaveUser" parameterType="java.util.List">
         INSERT INTO user (`id`, `user_name`, `sex`, `phone`, `create_time`)
         VALUES
@@ -15,4 +22,11 @@
             (#{item.id}, #{item.userName}, #{item.sex}, #{item.phone}, now())
         </foreach>
     </insert>
+
+    <select id="selectByIdList" resultType="com.example.entity.User">
+      select * from user where id in
+        <foreach collection="list" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </select>
 </mapper>
