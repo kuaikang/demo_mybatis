@@ -19,4 +19,6 @@ public interface UserService {
     List<User> selectUserByName(String userName);
 
     List<User> selectByIdList(List<String> idList);
+
+    User selectByIdOrUserName(User user);
 }

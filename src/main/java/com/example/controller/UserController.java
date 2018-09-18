@@ -58,4 +58,9 @@ public class UserController {
         }
         return this.userService.selectByIdList(idList);
     }
+
+    @PostMapping("getUserByIdOrUserName")
+    public Object getUserByIdOrUserName(@RequestBody User user){
+        return this.userService.selectByIdOrUserName(user);
+    }
 }

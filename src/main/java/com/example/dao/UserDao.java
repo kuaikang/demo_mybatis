@@ -21,4 +21,6 @@ public interface UserDao {
     void batchSaveUser(List<User> userList);
 
     List<User> selectByIdList(List<String> idList);
+
+    User selectByIdOrUserName(@Param("user") User user);
 }

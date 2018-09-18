@@ -50,4 +50,9 @@ public class UserServiceImpl implements UserService {
     public List<User> selectByIdList(List<String> idList) {
         return this.userDao.selectByIdList(idList);
     }
+
+    @Override
+    public User selectByIdOrUserName(User user) {
+        return this.userDao.selectByIdOrUserName(user);
+    }
 }
