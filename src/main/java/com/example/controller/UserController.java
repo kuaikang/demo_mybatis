@@ -4,7 +4,9 @@ import com.example.entity.User;
 import com.example.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 /**
  * @Author: kuaik
@@ -20,8 +22,16 @@ public class UserController {
 
     @PostMapping("insert")
     public String insert(@RequestBody User user){
-        System.out.println("111");
         this.userService.saveUser(user);
+        return "success";
+    }
+
+    @PostMapping("batchInsert")
+    public String batchInsert(@RequestBody List<User> userList){
+        if(CollectionUtils.isEmpty(userList)){
+            return "param error";
+        }
+        this.userService.batchSaveUser(userList);
         return "success";
     }
 

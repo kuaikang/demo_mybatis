@@ -7,7 +7,7 @@ import com.example.util.UUID;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
+import java.util.List;
 
 /**
  * @Author: kuaik
@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUser(User user) {
         user.setId(UUID.get());
-        user.setCreateTime(new Date());
         this.userDao.saveUser(user);
     }
 
@@ -32,5 +31,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public User selectUserById(String id) {
         return this.userDao.selectUserById(id);
+    }
+
+    @Override
+    public void batchSaveUser(List<User> userList) {
+        for (User user : userList) {
+            user.setId(UUID.get());
+        }
+        this.userDao.batchSaveUser(userList);
     }
 }

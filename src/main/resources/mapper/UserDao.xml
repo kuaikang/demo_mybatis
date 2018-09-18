@@ -3,9 +3,16 @@
 <mapper namespace="com.example.dao.UserDao">
     <insert id="saveUser">
         INSERT INTO user (`id`, `user_name`, `sex`, `phone`, `create_time`)
-        VALUES (#{id}, #{userName}, #{sex}, #{phone}, #{createTime});
+        VALUES (#{id}, #{userName}, #{sex}, #{phone}, now());
     </insert>
     <select id="selectUserById" parameterType="java.lang.String" resultType="com.example.entity.User">
         select * from user where id = #{id}
     </select>
+    <insert id="batchSaveUser" parameterType="java.util.List">
+        INSERT INTO user (`id`, `user_name`, `sex`, `phone`, `create_time`)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.id}, #{item.userName}, #{item.sex}, #{item.phone}, now())
+        </foreach>
+    </insert>
 </mapper>
