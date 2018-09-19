@@ -31,17 +31,19 @@
     </select>
 
     <select id="selectByIdOrUserName" resultType="com.example.entity.User">
-        select * from user where 1 =1
-        <choose>
-            <when test="@org.apache.commons.lang3.StringUtils@isNotBlank(user.id)">
-                and id = #{user.id}
-            </when>
-            <when test="@org.apache.commons.lang3.StringUtils@isNotBlank(user.userName)">
-                and user_name = #{user.userName}
-            </when>
-            <otherwise>
-                and 1 = 2
-            </otherwise>
-        </choose>
+        select * from user
+        <where>
+            <choose>
+                <when test="@org.apache.commons.lang3.StringUtils@isNotBlank(user.id)">
+                    id = #{user.id}
+                </when>
+                <when test="@org.apache.commons.lang3.StringUtils@isNotBlank(user.userName)">
+                    and user_name = #{user.userName}
+                </when>
+                <otherwise>
+                    and 1 = 2
+                </otherwise>
+            </choose>
+        </where>
     </select>
 </mapper>

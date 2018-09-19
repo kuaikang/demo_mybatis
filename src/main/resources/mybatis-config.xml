@@ -12,7 +12,11 @@
         <setting name="useColumnLabel" value="true"/>
         <!--开启驼峰命名转换-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
-
-        <setting name="logImpl" value="STDOUT_LOGGING" />
+        <!--打印sql语句 -->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING" />-->
     </settings>
+
+    <plugins>
+        <plugin interceptor="com.example.interceptor.MybatisInterceptor"></plugin>
+    </plugins>
 </configuration>
