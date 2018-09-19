@@ -67,6 +67,7 @@
             <version>5.1.2</version>
         </dependency>
 
+        <!-- web依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -78,6 +79,19 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.8</version>
         </dependency>
+
+        <!-- 支付宝支付 所需-->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- 支付宝支付 所需-->
     </dependencies>
 
     <build>
