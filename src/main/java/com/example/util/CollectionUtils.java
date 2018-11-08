@@ -16,4 +16,8 @@ public class CollectionUtils {
     public static boolean isNotEmpty(Collection<?> collection){
         return !isEmpty(collection);
     }
+
+    public void get(){
+
+    }
 }
