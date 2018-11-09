@@ -17,7 +17,8 @@ public class CollectionUtils {
         return !isEmpty(collection);
     }
     public void set(){
-
+        System.out.println("AAAAA");
+    	System.out.println("BBB");
     }
 
     public void get(){
