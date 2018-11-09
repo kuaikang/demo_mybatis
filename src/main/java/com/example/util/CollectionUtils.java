@@ -23,6 +23,7 @@ public class CollectionUtils {
     }
 
     public void get(){
+    	System.out.println("CCC");
         System.out.println("ABC");
     }
 }
