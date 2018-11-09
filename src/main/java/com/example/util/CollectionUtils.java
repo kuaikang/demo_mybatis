@@ -20,9 +20,11 @@ public class CollectionUtils {
         System.out.println("AAAAA");
     	System.out.println("BBB");
         System.out.println("CCC");
+        System.out.println("master");
     }
 
     public void get(){
+        System.out.println("master");
     	System.out.println("CCC");
         System.out.println("ABC");
         System.out.println("ABCDE");
