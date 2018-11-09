@@ -23,5 +23,6 @@ public class CollectionUtils {
     }
 
     public void get(){
+        System.out.println("ABC");
     }
 }
