@@ -18,9 +18,8 @@ import java.util.List;
 public class UserController {
 
     public static void main(String[] args) {
-        System.out.println("develop");
+        System.out.println("master");
     }
-
 
     @Autowired
     private UserService userService;
