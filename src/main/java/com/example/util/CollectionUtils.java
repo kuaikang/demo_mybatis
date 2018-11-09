@@ -19,4 +19,8 @@ public class CollectionUtils {
     public void set(){
 
     }
+
+    public void get(){
+
+    }
 }
