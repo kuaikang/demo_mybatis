@@ -23,7 +23,5 @@ public class CollectionUtils {
     }
 
     public void get(){
-    	System.out.println("DDD");
-    	System.out.println("FFF");
     }
 }
