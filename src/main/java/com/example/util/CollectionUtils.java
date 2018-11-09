@@ -17,10 +17,10 @@ public class CollectionUtils {
         return !isEmpty(collection);
     }
     public void set(){
-
+        System.out.println("master");
     }
 
     public void get(){
-
+        System.out.println("master");
     }
 }
