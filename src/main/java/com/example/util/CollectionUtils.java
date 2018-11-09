@@ -19,6 +19,7 @@ public class CollectionUtils {
     public void set(){
         System.out.println("AAAAA");
     	System.out.println("BBB");
+        System.out.println("CCC");
     }
 
     public void get(){
