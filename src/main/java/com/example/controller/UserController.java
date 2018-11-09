@@ -17,6 +17,10 @@ import java.util.List;
 @RequestMapping("user")
 public class UserController {
 
+    public static void main(String[] args) {
+        System.out.println("develop");
+    }
+
     @Autowired
     private UserService userService;
 
