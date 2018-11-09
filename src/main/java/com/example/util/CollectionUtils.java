@@ -25,5 +25,6 @@ public class CollectionUtils {
     public void get(){
     	System.out.println("CCC");
         System.out.println("ABC");
+        System.out.println("ABCDE");
     }
 }
