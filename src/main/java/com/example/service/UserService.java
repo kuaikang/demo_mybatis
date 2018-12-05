@@ -21,4 +21,6 @@ public interface UserService {
     List<User> selectByIdList(List<String> idList);
 
     User selectByIdOrUserName(User user);
+
+    void updateMany();
 }

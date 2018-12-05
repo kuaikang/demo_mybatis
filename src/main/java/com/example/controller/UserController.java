@@ -68,4 +68,10 @@ public class UserController {
     public Object getUserByIdOrUserName(@RequestBody User user){
         return this.userService.selectByIdOrUserName(user);
     }
+
+    @GetMapping("/testAllowMultiQueries")
+    public String testAllowMultiQueries(){
+        this.userService.updateMany();
+        return "";
+    }
 }
