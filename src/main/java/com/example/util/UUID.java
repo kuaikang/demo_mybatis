@@ -9,4 +9,8 @@ public class UUID {
     public static String get() {
         return java.util.UUID.randomUUID().toString().replaceAll("-", "");
     }
+
+    public void say(){
+        System.out.println("Hello");
+    }
 }
