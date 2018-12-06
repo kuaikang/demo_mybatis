@@ -13,4 +13,8 @@ public class UUID {
     public void say(){
         System.out.println("Hello");
     }
+
+    public void hello(){
+        
+    }
 }
