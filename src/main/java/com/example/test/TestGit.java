@@ -16,4 +16,8 @@ public class TestGit {
     public void testResetTwo(){
         System.out.println("this is second commit push");
     }
+
+    public static void main(String[] args) {
+        
+    }
 }
