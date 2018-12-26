@@ -55,4 +55,9 @@ public class UserServiceImpl implements UserService {
     public User selectByIdOrUserName(User user) {
         return this.userDao.selectByIdOrUserName(user);
     }
+
+    @Override
+    public void updateMany() {
+        this.userDao.updateMany();
+    }
 }

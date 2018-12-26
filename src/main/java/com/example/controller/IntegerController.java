@@ -11,6 +11,5 @@ public class IntegerController {
         Integer integer = Integer.valueOf(10);
         Integer integer1 = new Integer(11);
         System.out.println(integer);
-        System.out.println("master");
     }
 }
