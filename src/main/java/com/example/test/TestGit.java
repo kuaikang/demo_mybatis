@@ -13,9 +13,6 @@ public class TestGit {
         System.out.println("this is first commit push");
     }
 
-    public void testResetTwo(){
-        System.out.println("this is second commit push");
-    }
 
     public void hello(){
         System.out.println("this is two");
