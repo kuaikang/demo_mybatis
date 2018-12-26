@@ -19,5 +19,11 @@ public class TestGit {
 
     public static void main(String[] args) {
 
+    public void hello(){
+        System.out.println("this is two");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("this is one");
     }
 }
