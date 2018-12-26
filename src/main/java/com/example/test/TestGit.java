@@ -17,6 +17,10 @@ public class TestGit {
         System.out.println("this is second commit push");
     }
 
+    public void hello(){
+        System.out.println("this is two");
+    }
+
     public static void main(String[] args) {
         System.out.println("this is one");
     }
